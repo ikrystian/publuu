@@ -63,10 +63,10 @@ p {
 }
 
 section {
-  padding-block: $primary-space / 3;
+  padding-block: calc( $primary-space / 3);
 
   @media (width > $tablet) {
-    padding-block: $primary-space / 2;
+    padding-block: calc($primary-space / 2);
   }
 
   @media (width > $desktop) {
