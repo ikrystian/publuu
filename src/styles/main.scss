@@ -49,6 +49,25 @@ h2 {
 
 }
 
+h3 {
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 30px;
+  margin-bottom: 10px;
+
+  @media (width > $tablet) {
+    font-szie: 32px;
+    line-height: 38px;
+    margin-bottom: 20px;
+  }
+
+  @media (width > $desktop) {
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 30px;
+  }
+}
+
 h4 {
   font-family: "Urbanist", serif;
   font-size: 32px;
@@ -515,7 +534,8 @@ section {
       }
     }
 
-    h2 + p {
+    h2 + p,
+    h3 + p {
       margin-bottom: 2rem;
     }
 
