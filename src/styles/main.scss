@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 $tablet: 768px;
+$desktop: 1280px;
 $primary-space: 120px;
 $primary-color: #146EF5;
 
@@ -164,27 +165,44 @@ section {
 .share-bar {
   border: 1px solid #C0C0C0;
   display: flex;
-  padding: 14px 16px 14px 30px;
+  flex-direction: column;
+  padding: 0.5rem;
   border-radius: 10px;
   width: 850px;
   max-width: 100%;
   margin-inline: auto;
   align-items: center;
   margin-bottom: 35px;
+  gap: 1rem;
+  position: relative;
+
+  @media (width > $tablet) {
+    gap: 0;
+    flex-direction: row;
+    padding: 14px 16px 14px 30px;
+  }
 
   &__dots {
-    display: flex;
+    display: none;
     margin-right: 30px;
     gap: 10px;
+
+    @media (width > $desktop) {
+      display: flex;
+    }
 
     &::before,
     &::after {
       width: 20px;
       height: 20px;
-      background-color: #C0C0C0;
       border-radius: 10px;
       display: block;
       content: '';
+      animation: backgroundColorChange 5s infinite alternate;
+    }
+
+    &::after {
+      animation-delay: 2s;
     }
   }
 
@@ -192,28 +210,88 @@ section {
     background-color: #fff;
     flex: 1 1 auto;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 18px;
     border-radius: 4rem;
     text-align: left;
     border: 1px solid #C0C0C0;
-    padding: 13px 30px;
+    padding: 13px 16px;
     display: flex;
     white-space: nowrap;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    @media (width > $tablet) {
+      padding: 13px 30px;
+      font-size: 20px;
+      line-height: 24px;
+      width: auto;
+      max-width: unset;
+    }
   }
 
   &__link {
-    margin-left: 10px;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #146EF5;
-    color: #fff;
-    text-transform: uppercase;
-    display: block;
-    line-height: 52px;
-    border-radius: 4rem;
-    font-weight: 600;
-    font-size: 20px;
-    text-decoration: none;
-    padding-inline: 27px;
+    border-radius: 24px;
+    top: 0.5rem;
+    right: 0.5rem;
+    position: absolute;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: #fff;
+    }
+
+    span {
+      display: none;
+    }
+
+    @media (width > $tablet) {
+      margin-left: 10px;
+      position: relative;
+      top: unset;
+      right: unset;
+      width: auto;
+      height: auto;
+      color: #fff;
+      text-transform: uppercase;
+      display: block;
+      line-height: 52px;
+      border-radius: 4rem;
+      font-weight: 600;
+      font-size: 20px;
+      text-decoration: none;
+      padding-inline: 27px;
+
+      span {
+        display: block;
+      }
+
+      svg {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes backgroundColorChange {
+  0% {
+    background-color: #fff;
+  }
+
+  50% {
+    background-color: $primary-color;
+  }
+
+  100% {
+    background-color: #C0C0C0;
   }
 }
 
@@ -400,6 +478,7 @@ section {
 
 .footer-menus {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
   gap: 94px;
@@ -441,11 +520,19 @@ section {
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: white; }
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }
