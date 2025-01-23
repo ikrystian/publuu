@@ -13,6 +13,7 @@ body {
   color: #000;
   font-family: "Roboto", serif;
   font-optical-sizing: auto;
+  font-size: 16px;
 }
 
 img {
@@ -330,5 +331,61 @@ section {
 }
 
 .footer {
+  background-color: #080808;
 
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    opacity: 40%;
+    padding-bottom: 20px;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.footer-menus {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  gap: 94px;
+
+  &__block {
+  margin-block: 60px;
+
+    strong {
+      color: #fff;
+      font-weight: 700;
+      line-height: 32px;
+      display: block;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    a {
+      display: block;
+      color: rgba(255, 255, 255, 0.4);
+      font-weight: 600;
+      line-height: 30px;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+
+      &:hover, &:focus {
+        text-decoration: underline;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
 }
