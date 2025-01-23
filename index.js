@@ -1,16 +1,32 @@
 import "./src/styles/main.scss";
 import 'offcanvas';
 
-window.addEventListener("scroll", () => {
-    const header = document.querySelector("#header");
-    if (window.scrollY > 200) {
-        header.classList.add("header--active");
-    } else {
-        header.classList.remove("header--active");
-    }
-});
+
 
 document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector("#header");
+
+    function toggleHeaderClass() {
+        const isActive = window.scrollY > 200;
+        header.classList.toggle("header--active", isActive);
+    }
+
+    function debounce(func, delay) {
+        let timeoutId;
+        return function(...args) {
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
+            timeoutId = setTimeout(() => {
+                func.apply(this, args);
+            }, delay);
+        };
+    }
+
+    const debouncedToggleHeaderClass = debounce(toggleHeaderClass, 100);
+
+    window.addEventListener("scroll", debouncedToggleHeaderClass);
+
     const sentences = [
         "4002/120275",
         "1234/658744",
@@ -23,13 +39,21 @@ document.addEventListener("DOMContentLoaded", () => {
     let pauseBetweenSentences = 1500;
 
     function type() {
-        if (charIndex < sentences[sentenceIndex].length) {
-            typewriterElement.textContent += sentences[sentenceIndex].charAt(charIndex);
-            charIndex++;
-            setTimeout(type, typingSpeed);
-        } else {
+        if (isTypingComplete()) {
             setTimeout(erase, pauseBetweenSentences);
+        } else {
+            appendNextCharacter();
+            setTimeout(type, typingSpeed);
         }
+    }
+
+    function isTypingComplete() {
+        return charIndex >= sentences[sentenceIndex].length;
+    }
+
+    function appendNextCharacter() {
+        typewriterElement.textContent += sentences[sentenceIndex].charAt(charIndex);
+        charIndex++;
     }
 
     function erase() {
@@ -106,15 +130,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const messageDiv = document.getElementById('message');
-    if (!localStorage.getItem('messageShown')) {
-        messageDiv.style.display = 'flex';
+    const closeButton = document.getElementById('close-btn');
 
-        document.getElementById('close-btn').addEventListener('click', function() {
-            messageDiv.style.display = 'none';
-            localStorage.setItem('messageShown', 'true');
-        });
-    } else {
+    function showMessage() {
+        messageDiv.style.display = 'flex';
+    }
+
+    function hideMessage() {
         messageDiv.style.display = 'none';
     }
+
+    function handleCloseButtonClick() {
+        hideMessage();
+        localStorage.setItem('messageShown', 'true');
+    }
+
+    function initializeMessageDisplay() {
+        if (!localStorage.getItem('messageShown')) {
+            showMessage();
+            closeButton.addEventListener('click', handleCloseButtonClick);
+        } else {
+            hideMessage();
+        }
+    }
+
+    initializeMessageDisplay();
 });
 
