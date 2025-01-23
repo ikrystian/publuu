@@ -46,5 +46,19 @@ document.addEventListener("DOMContentLoaded", () => {
     type();
 
     document.querySelector('#off-canvas-menu').appendChild(document.querySelector(".main-nav ul").cloneNode(true));
+
+    const sections = document.querySelectorAll('section:not(.hero-section)');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            }
+        });
+    });
+
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
 });
 

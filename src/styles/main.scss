@@ -66,6 +66,17 @@ p {
 section {
   padding-block: calc($primary-space / 3);
 
+  &:not(.hero-section) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease-out, transform 0.8s ease-out;
+
+    &.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   @media (width > $tablet) {
     padding-block: calc($primary-space / 2);
   }
