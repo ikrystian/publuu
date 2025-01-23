@@ -138,18 +138,28 @@
 
                 <ul class="tabs">
                     <li>
-                        <button class="tabs__button tabs__button--active">With a background</button>
+                        <button class="tabs__button tabs__button--active" id="tab1">With a background</button>
                     </li>
                     <li>
-                        <button class="tabs__button ">Without a background</button>
+                        <button class="tabs__button" id="tab2">Without a background</button>
                     </li>
                     <li>
-                        <button class="tabs__button ">
+                        <button class="tabs__button" id="tab3">
                             As a clickable button
                         </button>
                     </li>
                 </ul>
-                <p>SVG BROWSER HERE</p>
+
+                <div class="tab-content" id="content1">
+                    <img src="/tab-1.webp" alt="Tab 1 image">
+                </div>
+                <div class="tab-content hidden" id="content2">
+                    <img src="/tab-2.webp" alt="Tab 2 image">
+                </div>
+                <div class="tab-content hidden" id="content3">
+                    <img src="/tab-3.webp" alt="Tab 3 image">
+                </div>
+
                 <p class="center" style="margin-top: 60px;">Learn more about
                     <a href="#" class="custom-link">
                         Sharing with Direct Links

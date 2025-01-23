@@ -60,5 +60,19 @@ document.addEventListener("DOMContentLoaded", () => {
     sections.forEach((section) => {
         observer.observe(section);
     });
+
+    const buttons = document.querySelectorAll(".tabs__button");
+    const contents = document.querySelectorAll(".tab-content");
+
+    buttons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            buttons.forEach(btn => btn.classList.remove("tabs__button--active"));
+
+            button.classList.add("tabs__button--active");
+            contents.forEach(content => content.classList.add("hidden"));
+            const contentToShow = document.querySelector(`#content${index + 1}`);
+            contentToShow.classList.remove("hidden");
+        });
+    });
 });
 

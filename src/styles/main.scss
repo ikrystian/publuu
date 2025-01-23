@@ -62,9 +62,9 @@ h3 {
   }
 
   @media (width > $desktop) {
-  font-size: 40px;
-  line-height: 55px;
-  margin-bottom: 30px;
+    font-size: 40px;
+    line-height: 55px;
+    margin-bottom: 30px;
   }
 }
 
@@ -496,6 +496,12 @@ section {
       border-color: #146EF5;
       background-color: #146EF5;
     }
+  }
+}
+
+.tab-content {
+  &.hidden {
+    display: none;
   }
 }
 
