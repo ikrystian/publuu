@@ -198,6 +198,8 @@ section {
     text-align: left;
     border: 1px solid #C0C0C0;
     padding: 13px 30px;
+    display: flex;
+    white-space: nowrap;
   }
 
   &__link {
@@ -429,4 +431,21 @@ section {
       }
     }
   }
+}
+
+.typewriter {
+  border-right: 2px solid white;
+  white-space: nowrap;
+  width: 100%;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: white; }
 }
