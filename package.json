@@ -1,0 +1,17 @@
+{
+  "name": "publuu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite dev",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass-embedded": "^1.83.4",
+    "vite": "^6.0.11"
+  }
+}
