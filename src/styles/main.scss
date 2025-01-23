@@ -278,6 +278,7 @@ section {
 }
 
 .share-bar {
+  overflow-x: hidden;
   border: 1px solid #C0C0C0;
   display: flex;
   flex-direction: column;
