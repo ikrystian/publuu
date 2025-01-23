@@ -171,6 +171,10 @@ section {
     border: 0;
     border-radius: 50%;
 
+    @media (width > 768px) {
+      display: none;
+    }
+
     svg {
       fill: #F2F2F2;
       width: 16px;
@@ -229,9 +233,7 @@ section {
 
 @media (width > 768px) {
   .main-nav {
-    > button {
-      display: none;
-    }
+
 
     > ul {
       display: flex;
