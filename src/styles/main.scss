@@ -33,6 +33,11 @@ $primary-space: 120px;
 $primary-color: #146EF5;
 $hover-primary: #5d9eff;
 
+::selection {
+  color: #fff;
+  background-color: $primary-color;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   cursor: pointer;
