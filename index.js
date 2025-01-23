@@ -91,11 +91,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
             document.getElementById('confettiContainer').appendChild(confetti);
 
-            // Remove confetti after animation ends
             confetti.addEventListener('animationend', () => {
                 confetti.remove();
             });
         }
+    }
+
+    const messageDiv = document.getElementById('message');
+    if (!localStorage.getItem('messageShown')) {
+        messageDiv.style.display = 'flex';
+
+        document.getElementById('close-btn').addEventListener('click', function() {
+            messageDiv.style.display = 'none';
+            localStorage.setItem('messageShown', 'true');
+        });
+    } else {
+        messageDiv.style.display = 'none';
     }
 });
 

@@ -1,6 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'offcanvas/offcanvas.css';
 
+.message {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1.6rem;
+
+  &__content {
+    padding: 1rem;
+    background-color: #fff;
+
+    p {
+      margin-top: 1rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
 $phone: 578px;
 $tablet: 768px;
 $desktop: 1280px;

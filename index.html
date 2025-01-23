@@ -8,6 +8,21 @@
     <title>Publuu</title>
 </head>
 <body>
+<div id="message" class="message">
+    <div class="message__content">
+        <p>Na obecne zadanie ze względu choroby poświeciłem jedynie jeden dzieńn (23.01.2025), w projekcie jest sporo
+            rzeczy które trzeba poddać refactoringnowi jednak moim celem było zrobiennie jak największej ilości
+            elementów. Poświęciłem około 12 godzin na przygotowanie tego LP, moim zdaniem jest to dość dużo jak na
+            zwykłe zadanie rekrutacyjne które ma sprawdzić umiejętności. Można je zobaczyć na podstawie projektów, które
+            robiłem wcześniej :) Porozmawiajmy o tym projekcie zamiast oceniać jedynie po jakości kodu.</p>
+        <p>Po zaproszeniu na rozmowe (omówienie projektu) prześlę dostęp do repozytorium do którego pushowałem wszystkie zmiany.</p>
+        <p><strong>Nie wyrażam zgody na wykorzystanie żadnego elementnu do celów innych, niż rekrutacyjne.</strong></p>
+        <div>
+            <button id="close-btn">Zamknnij to okno</button>
+        </div>
+    </div>
+</div>
+
 <div class="offcanvas-wrapper">
     <div class="offcanvas left" data-offcanvas="navleft">
         <div>
@@ -20,7 +35,9 @@
                 <div><a href="/"><img src="/logo.svg" alt="logo image" width="150" height="49"></a></div>
                 <nav class="main-nav">
                     <button class="off-button" type="button" data-offcanvas-trigger="navleft">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+                        </svg>
                     </button>
 
                     <ul>
@@ -64,7 +81,7 @@
             </div>
         </section>
 
-        <section class="grey-section direct-links-section"  id="share-bar-sec">
+        <section class="grey-section direct-links-section" id="share-bar-sec">
             <div class="container">
                 <h2>Sharing Flipbooks with Direct Links</h2>
                 <p>It’s so easy. Just copy the link, send it through email or any messenger, and let your readers open
@@ -268,7 +285,8 @@
         <section class="share-section">
             <div class="container">
                 <div class="share-section__column">
-                    <div><img src="/share-section-image-1.webp" width="411" height="350" alt="Share section image 1"></div>
+                    <div><img src="/share-section-image-1.webp" width="411" height="350" alt="Share section image 1">
+                    </div>
                     <h4>Share with a Custom link</h4>
                     <p>Add a personal touch to your flipbook links. Share your flipbooks with a custom link that
                         reflects your
@@ -277,7 +295,8 @@
                         easily.</p>
                 </div>
                 <div class="share-section__column">
-                    <div><img src="/share-section-image-2.webp" width="411" height="350" alt="Share section image 2"></div>
+                    <div><img src="/share-section-image-2.webp" width="411" height="350" alt="Share section image 2">
+                    </div>
                     <h4>Send as a Virtual Bookshelf</h4>
                     <p>Why stop at one flipbook? You can share multiple publications in an organized virtual bookshelf.
                         It’s a
