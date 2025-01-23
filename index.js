@@ -74,5 +74,29 @@ document.addEventListener("DOMContentLoaded", () => {
             contentToShow.classList.remove("hidden");
         });
     });
+
+    document.getElementById('confettiButton').addEventListener('click', createConfetti);
+
+    function createConfetti(e) {
+        e.preventDefault();
+        const colors = ['#FF0B0B', '#0BFF0B', '#0B0BFF', '#FF0BFF', '#FFFF0B'];
+        const confettiCount = 100;
+
+        for (let i = 0; i < confettiCount; i++) {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.animationDuration = Math.random() * 2 + 1 + 's'; // Random duration between 1s and 3s
+            confetti.style.opacity = Math.random();
+
+            document.getElementById('confettiContainer').appendChild(confetti);
+
+            // Remove confetti after animation ends
+            confetti.addEventListener('animationend', () => {
+                confetti.remove();
+            });
+        }
+    }
 });
 
