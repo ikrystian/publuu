@@ -77,8 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById('confettiButton').addEventListener('click', createConfetti);
 
-    function createConfetti(e) {
-        e.preventDefault();
+    function createConfetti() {
         const colors = ['#FF0B0B', '#0BFF0B', '#0B0BFF', '#FF0BFF', '#FFFF0B'];
         const confettiCount = 100;
 
