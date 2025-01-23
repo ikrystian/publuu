@@ -34,13 +34,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function erase() {
         if (charIndex > 0) {
-            typewriterElement.textContent = sentences[sentenceIndex].substring(0, charIndex - 1);
+            updateTextContent();
             charIndex--;
             setTimeout(erase, typingSpeed);
         } else {
-            sentenceIndex = (sentenceIndex + 1) % sentences.length;
+            moveToNextSentence();
             setTimeout(type, typingSpeed);
         }
+    }
+
+    function updateTextContent() {
+        typewriterElement.textContent = sentences[sentenceIndex].substring(0, charIndex - 1);
+    }
+
+    function moveToNextSentence() {
+        sentenceIndex = (sentenceIndex + 1) % sentences.length;
     }
 
     type();
