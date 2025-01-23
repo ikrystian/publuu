@@ -567,6 +567,16 @@ section {
   }
 }
 
+.tabs-container {
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  opacity: 0.8;
+
+  &:hover {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+}
+
 .tab-content {
   &.hidden {
     display: none;
@@ -614,6 +624,9 @@ section {
     }
 
     + div {
+      img {
+        animation: float 6s ease-in-out infinite;
+      }
       @media (width > $tablet) {
         min-width: 440px;
         width: 440px;
@@ -803,5 +816,17 @@ section {
   }
   100% {
     transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
   }
 }
