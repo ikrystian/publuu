@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'offcanvas/offcanvas.css';
 
 $phone: 578px;
 $tablet: 768px;
@@ -63,7 +64,7 @@ p {
 }
 
 section {
-  padding-block: calc( $primary-space / 3);
+  padding-block: calc($primary-space / 3);
 
   @media (width > $tablet) {
     padding-block: calc($primary-space / 2);
@@ -131,31 +132,76 @@ section {
   }
 }
 
+.main-nav ul {
+  display: none;
+}
+
 @media (width > 768px) {
   .main-nav {
-    ul {
+    > button {
+      display: none;
+    }
+
+    > ul {
       display: flex;
       gap: 3.2rem;
       list-style: none;
       padding: 0;
+
+      li {
+        display: flex;
+        position: relative;
+
+        &.has-submenu {
+          &::after {
+            content: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><path d="M7.42 9.09L12 13.67L16.59 9.09L18 10.5L12 16.5L6 10.5L7.42 9.09Z" fill="%23080808"/></svg>');
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+          }
+
+          &:hover {
+            ul {
+              display: block;
+            }
+          }
+
+          ul {
+            display: none;
+            background-color: #fff;
+            padding: 0.5rem;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            min-width: 200px;
+            position: absolute;
+            top: 24px;
+
+            a {
+              display: block;
+              padding: 0.5rem;
+            }
+          }
+        }
+
+        a {
+          text-decoration: none;
+          font-weight: 600;
+          line-height: 24px;
+          color: #080808;
+          transition: color 0.2s ease-in-out;
+
+          &.current {
+            color: $primary-color;
+          }
+
+          &:hover, &:focus {
+            color: $primary-color;
+            text-decoration: underline;
+          }
+        }
+      }
     }
 
-    a {
-      text-decoration: none;
-      font-weight: 600;
-      line-height: 18px;
-      color: #080808;
-      transition: color 0.2s ease-in-out;
 
-      &.current {
-        color: $primary-color;
-      }
-
-      &:hover, &:focus {
-        color: $primary-color;
-        text-decoration: underline;
-      }
-    }
   }
 }
 
@@ -341,6 +387,7 @@ section {
 
 .section-qr-code {
   padding-bottom: 0;
+
   &__content {
     max-width: 630px;
 

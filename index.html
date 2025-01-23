@@ -8,316 +8,356 @@
     <title>Publuu</title>
 </head>
 <body>
+<div class="offcanvas-wrapper">
+    <div class="offcanvas left" data-offcanvas="navleft">
+        <div style="background-color: #fff; height: 100%;">
+            <div id="off-canvas-menu"></div>
+        </div>
+    </div>
+    <div class="offcanvas-content" data-offcanvas-content>
+        <header class="header" id="header">
+            <div class="container">
+                <div><a href="/"><img src="/logo.svg" alt="logo image"></a></div>
+                <nav class="main-nav">
+                    <button type="button" data-offcanvas-trigger="navleft">Show left nav</button>
 
-<header class="header" id="header">
-    <div class="container">
-        <div><a href="/"><img src="/logo.svg" alt="logo image"></a></div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">Solutions</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a class="current" href="#">Examples</a></li>
-                    <li><a href="#">Prices</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <ul>
+                        <li class="has-submenu">
+                            <a href="#">Solutions</a>
+                            <ul>
+                                <li><a href="#">Lorem </a></li>
+                                <li><a href="#">Ipsum</a></li>
+                                <li><a href="#">Dolor</a></li>
+                                <li><a href="#">Sit</a></li>
+                                <li><a href="#">Amet</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Features</a></li>
+                        <li><a class="current" href="#">Examples</a></li>
+                        <li><a href="#">Prices</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </nav>
+                <div>buttons (actions)</div>
+            </div>
+        </header>
+
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-section__content">
+                    <h2>Sharing Your Flipbooks</h2>
+                    <p>Sharing your digital publications is easy with Publuu. Whether it’s a portfolio, a client
+                        catalog, or an
+                        online magazine, we give you the tools to make it quick and simple. No matter the purpose, we've
+                        got
+                        everything you need</p>
+                </div>
+                <div>
+                    <img src="/hero.webp" width="627" alt="Hero image">
+                </div>
+            </div>
+        </section>
+
+        <section class="grey-section direct-links-section">
+            <div class="container">
+                <h2>Sharing Flipbooks with Direct Links</h2>
+                <p>It’s so easy. Just copy the link, send it through email or any messenger, and let your readers open
+                    it with a
+                    single click.</p>
+
+                <div class="share-bar">
+                    <div class="share-bar__dots"></div>
+                    <div class="share-bar__input">
+                        https://publuu.com/flip-book/
+                        <div class="typewriter" id="typewriter"></div>
+                    </div>
+                    <a href="https://publuu.com" class="share-bar__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                        </svg>
+                        <span>Open link</span>
+                    </a>
+                </div>
+
+                <img src="direct-link-image.webp" width="841" alt="Direct link image">
+                <p><strong>Learn more about</strong>
+                    <a href="#" class="custom-link">
+                        Sharing with Direct Links
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.66692 9.16603L2.66692 7.8327L10.6669 7.8327L7.00026 4.16603L7.94692 3.21937L13.2269 8.49937L7.94692 13.7794L7.00026 12.8327L10.6669 9.16603L2.66692 9.16603Z"
+                                  fill="#146EF5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M2.46692 9.36603L2.46692 7.6327L10.1841 7.6327L6.71741 4.16603L7.94692 2.93652L13.5098 8.49937L7.94692 14.0622L6.71741 12.8327L10.1841 9.36603L2.46692 9.36603ZM10.6669 9.16603L7.00026 12.8327L7.94692 13.7794L13.2269 8.49937L7.94692 3.21937L7.00026 4.16603L10.6669 7.8327L2.66692 7.8327L2.66692 9.16603L10.6669 9.16603Z"
+                                  fill="#146EF5"/>
+                        </svg>
+
+                    </a></p>
+            </div>
+        </section>
+
+        <section class="section-qr-code">
+            <div class="container">
+                <div class="section-qr-code__content">
+                    <h2>Share Your Flipbook with QR Code</h2>
+                    <p>Publuu generates a QR code for each of your flipbooks automatically. Download it and add to the 
+                        business
+                        cards, menus, or brochures so people access your publications right away. All they need is a
+                        quick
+                        smartphone scan.</p>
+                    <p><strong>Learn more about</strong>
+                        <a href="#" class="custom-link">
+                            Sharing with Direct Links
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.66692 9.16603L2.66692 7.8327L10.6669 7.8327L7.00026 4.16603L7.94692 3.21937L13.2269 8.49937L7.94692 13.7794L7.00026 12.8327L10.6669 9.16603L2.66692 9.16603Z"
+                                      fill="#146EF5"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M2.46692 9.36603L2.46692 7.6327L10.1841 7.6327L6.71741 4.16603L7.94692 2.93652L13.5098 8.49937L7.94692 14.0622L6.71741 12.8327L10.1841 9.36603L2.46692 9.36603ZM10.6669 9.16603L7.00026 12.8327L7.94692 13.7794L13.2269 8.49937L7.94692 3.21937L7.00026 4.16603L10.6669 7.8327L2.66692 7.8327L2.66692 9.16603L10.6669 9.16603Z"
+                                      fill="#146EF5"/>
+                            </svg>
+
+                        </a></p>
+                </div>
+                <div>
+
+                    <img src="qr-code-image.webp" alt="QR Code Image">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="embed-section">
+            <div class="container center">
+                <h2>Embed Flipbook into Your Website</h2>
+                <p>Showcase your flipbooks right on your website with Publuu's embed feature! It’s a simple way to keep
+                    your
+                    content
+                    front and center for your audience.
+                    <strong>See the live demo below to see it in action!</strong></p>
+
+                <ul class="tabs">
+                    <li>
+                        <button class="tabs__button tabs__button--active">With a background</button>
+                    </li>
+                    <li>
+                        <button class="tabs__button ">Without a background</button>
+                    </li>
+                    <li>
+                        <button class="tabs__button ">
+                            As a clickable button
+                        </button>
+                    </li>
                 </ul>
-            </nav>
-        <div>buttons (actions)</div>
-    </div>
-</header>
+                <p>SVG BROWSER HERE</p>
+                <p class="center" style="margin-top: 60px;">Learn more about
+                    <a href="#" class="custom-link">
+                        Sharing with Direct Links
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.66692 9.16603L2.66692 7.8327L10.6669 7.8327L7.00026 4.16603L7.94692 3.21937L13.2269 8.49937L7.94692 13.7794L7.00026 12.8327L10.6669 9.16603L2.66692 9.16603Z"
+                                  fill="#146EF5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M2.46692 9.36603L2.46692 7.6327L10.1841 7.6327L6.71741 4.16603L7.94692 2.93652L13.5098 8.49937L7.94692 14.0622L6.71741 12.8327L10.1841 9.36603L2.46692 9.36603ZM10.6669 9.16603L7.00026 12.8327L7.94692 13.7794L13.2269 8.49937L7.94692 3.21937L7.00026 4.16603L10.6669 7.8327L2.66692 7.8327L2.66692 9.16603L10.6669 9.16603Z"
+                                  fill="#146EF5"/>
+                        </svg>
 
-<section class="hero-section">
-    <div class="container">
-        <div class="hero-section__content">
-            <h2>Sharing Your Flipbooks</h2>
-            <p>Sharing your digital publications is easy with Publuu. Whether it’s a portfolio, a client catalog, or an
-                online magazine, we give you the tools to make it quick and simple. No matter the purpose, we've got
-                everything you need</p>
-        </div>
-        <div>
-            <img src="/hero.webp" width="627" alt="Hero image">
-        </div>
-    </div>
-</section>
-
-<section class="grey-section direct-links-section">
-    <div class="container">
-        <h2>Sharing Flipbooks with Direct Links</h2>
-        <p>It’s so easy. Just copy the link, send it through email or any messenger, and let your readers open it with a
-            single click.</p>
-
-        <div class="share-bar">
-            <div class="share-bar__dots"></div>
-            <div class="share-bar__input">
-                https://publuu.com/flip-book/
-                <div class="typewriter" id="typewriter"></div>
+                    </a></p>
             </div>
-            <a href="https://publuu.com" class="share-bar__link">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
-                <span>Open link</span>
-            </a>
-        </div>
+        </section>
 
-        <img src="direct-link-image.webp" width="841" alt="Direct link image">
-        <p><strong>Learn more about</strong>
-            <a href="#" class="custom-link">
-                Sharing with Direct Links
-                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.66692 9.16603L2.66692 7.8327L10.6669 7.8327L7.00026 4.16603L7.94692 3.21937L13.2269 8.49937L7.94692 13.7794L7.00026 12.8327L10.6669 9.16603L2.66692 9.16603Z"
-                          fill="#146EF5"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M2.46692 9.36603L2.46692 7.6327L10.1841 7.6327L6.71741 4.16603L7.94692 2.93652L13.5098 8.49937L7.94692 14.0622L6.71741 12.8327L10.1841 9.36603L2.46692 9.36603ZM10.6669 9.16603L7.00026 12.8327L7.94692 13.7794L13.2269 8.49937L7.94692 3.21937L7.00026 4.16603L10.6669 7.8327L2.66692 7.8327L2.66692 9.16603L10.6669 9.16603Z"
-                          fill="#146EF5"/>
-                </svg>
+        <section class="grey-section showcase">
+            <div class="container">
+                <div class="showcase__content">
+                    <h2>Share Your Flipbooks on Social Media</h2>
+                    <p>Share your flipbooks on Facebook, LinkedIn, or Twitter. Just paste a link into the post to create
+                        an
+                        eye-catching preview. With a few clicks, more people will see and interact with your
+                        content.</p>
+                    <p><strong>Learn more about</strong>
+                        <a href="#" class="custom-link">
+                            Sharing with Direct Links
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.66692 9.16603L2.66692 7.8327L10.6669 7.8327L7.00026 4.16603L7.94692 3.21937L13.2269 8.49937L7.94692 13.7794L7.00026 12.8327L10.6669 9.16603L2.66692 9.16603Z"
+                                      fill="#146EF5"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M2.46692 9.36603L2.46692 7.6327L10.1841 7.6327L6.71741 4.16603L7.94692 2.93652L13.5098 8.49937L7.94692 14.0622L6.71741 12.8327L10.1841 9.36603L2.46692 9.36603ZM10.6669 9.16603L7.00026 12.8327L7.94692 13.7794L13.2269 8.49937L7.94692 3.21937L7.00026 4.16603L10.6669 7.8327L2.66692 7.8327L2.66692 9.16603L10.6669 9.16603Z"
+                                      fill="#146EF5"/>
+                            </svg>
 
-            </a></p>
-    </div>
-</section>
-
-<section class="section-qr-code">
-    <div class="container">
-        <div class="section-qr-code__content">
-            <h2>Share Your Flipbook with QR Code</h2>
-            <p>Publuu generates a QR code for each of your flipbooks automatically. Download it and add to the  business
-                cards, menus, or brochures so people access your publications right away. All they need is a quick
-                smartphone scan.</p>
-            <p><strong>Learn more about</strong>
-                <a href="#" class="custom-link">
-                    Sharing with Direct Links
-                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.66692 9.16603L2.66692 7.8327L10.6669 7.8327L7.00026 4.16603L7.94692 3.21937L13.2269 8.49937L7.94692 13.7794L7.00026 12.8327L10.6669 9.16603L2.66692 9.16603Z"
-                              fill="#146EF5"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M2.46692 9.36603L2.46692 7.6327L10.1841 7.6327L6.71741 4.16603L7.94692 2.93652L13.5098 8.49937L7.94692 14.0622L6.71741 12.8327L10.1841 9.36603L2.46692 9.36603ZM10.6669 9.16603L7.00026 12.8327L7.94692 13.7794L13.2269 8.49937L7.94692 3.21937L7.00026 4.16603L10.6669 7.8327L2.66692 7.8327L2.66692 9.16603L10.6669 9.16603Z"
-                              fill="#146EF5"/>
-                    </svg>
-
-                </a></p>
-        </div>
-        <div>
-
-            <img src="qr-code-image.webp" alt="QR Code Image">
-        </div>
-    </div>
-
-</section>
-
-<section class="embed-section">
-    <div class="container center">
-        <h2>Embed Flipbook into Your Website</h2>
-        <p>Showcase your flipbooks right on your website with Publuu's embed feature! It’s a simple way to keep your
-            content
-            front and center for your audience.
-            <strong>See the live demo below to see it in action!</strong></p>
-
-        <ul class="tabs">
-            <li>
-                <button class="tabs__button tabs__button--active">With a background</button>
-            </li>
-            <li>
-                <button class="tabs__button ">Without a background</button>
-            </li>
-            <li>
-                <button class="tabs__button ">
-                    As a clickable button
-                </button>
-            </li>
-        </ul>
-        <p>SVG BROWSER HERE</p>
-        <p class="center" style="margin-top: 60px;">Learn more about
-            <a href="#" class="custom-link">
-                Sharing with Direct Links
-                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.66692 9.16603L2.66692 7.8327L10.6669 7.8327L7.00026 4.16603L7.94692 3.21937L13.2269 8.49937L7.94692 13.7794L7.00026 12.8327L10.6669 9.16603L2.66692 9.16603Z"
-                          fill="#146EF5"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M2.46692 9.36603L2.46692 7.6327L10.1841 7.6327L6.71741 4.16603L7.94692 2.93652L13.5098 8.49937L7.94692 14.0622L6.71741 12.8327L10.1841 9.36603L2.46692 9.36603ZM10.6669 9.16603L7.00026 12.8327L7.94692 13.7794L13.2269 8.49937L7.94692 3.21937L7.00026 4.16603L10.6669 7.8327L2.66692 7.8327L2.66692 9.16603L10.6669 9.16603Z"
-                          fill="#146EF5"/>
-                </svg>
-
-            </a></p>
-    </div>
-</section>
-
-<section class="grey-section showcase">
-    <div class="container">
-        <div class="showcase__content">
-            <h2>Share Your Flipbooks on Social Media</h2>
-            <p>Share your flipbooks on Facebook, LinkedIn, or Twitter. Just paste a link into the post to create an
-                eye-catching preview. With a few clicks, more people will see and interact with your content.</p>
-            <p><strong>Learn more about</strong>
-                <a href="#" class="custom-link">
-                    Sharing with Direct Links
-                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.66692 9.16603L2.66692 7.8327L10.6669 7.8327L7.00026 4.16603L7.94692 3.21937L13.2269 8.49937L7.94692 13.7794L7.00026 12.8327L10.6669 9.16603L2.66692 9.16603Z"
-                              fill="#146EF5"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M2.46692 9.36603L2.46692 7.6327L10.1841 7.6327L6.71741 4.16603L7.94692 2.93652L13.5098 8.49937L7.94692 14.0622L6.71741 12.8327L10.1841 9.36603L2.46692 9.36603ZM10.6669 9.16603L7.00026 12.8327L7.94692 13.7794L13.2269 8.49937L7.94692 3.21937L7.00026 4.16603L10.6669 7.8327L2.66692 7.8327L2.66692 9.16603L10.6669 9.16603Z"
-                              fill="#146EF5"/>
-                    </svg>
-
-                </a></p>
-        </div>
-        <div>
-            <img src="/showcase-1.webp" alt="Showcase 1 image">
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="showcase__content">
-            <h2>Send Flipbooks<br>via Email</h2>
-            <h3>No attachments needed!</h3>
-            <p>Say goodbye to big email attachments! Just add your flipbooks’s direct link to an email or include its
-                cover into the signature. Your customers can open it instantly with one simple click, no matter where
-                they are.</p>
-            <p><strong>Learn more about</strong>
-                <a href="#" class="custom-link">
-                    Sharing with Direct Links
-                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.66692 9.16603L2.66692 7.8327L10.6669 7.8327L7.00026 4.16603L7.94692 3.21937L13.2269 8.49937L7.94692 13.7794L7.00026 12.8327L10.6669 9.16603L2.66692 9.16603Z"
-                              fill="#146EF5"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M2.46692 9.36603L2.46692 7.6327L10.1841 7.6327L6.71741 4.16603L7.94692 2.93652L13.5098 8.49937L7.94692 14.0622L6.71741 12.8327L10.1841 9.36603L2.46692 9.36603ZM10.6669 9.16603L7.00026 12.8327L7.94692 13.7794L13.2269 8.49937L7.94692 3.21937L7.00026 4.16603L10.6669 7.8327L2.66692 7.8327L2.66692 9.16603L10.6669 9.16603Z"
-                              fill="#146EF5"/>
-                    </svg>
-
-                </a></p>
-        </div>
-        <div>
-            <img src="/showcase-2.webp" alt="Showcase 2 image">
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="showcase__content">
-            <h2>Guide Readers to a Specific Page</h2>
-            <p>Take your audience exactly where they need to go! With Publuu, you can create links to specific pages in
-                your flipbook, guiding readers to key content and saving them time searching through the document.</p>
-            <p><strong>Learn more about</strong>
-                <a href="#" class="custom-link">
-                    Sharing with Direct Links
-                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.66692 9.16603L2.66692 7.8327L10.6669 7.8327L7.00026 4.16603L7.94692 3.21937L13.2269 8.49937L7.94692 13.7794L7.00026 12.8327L10.6669 9.16603L2.66692 9.16603Z"
-                              fill="#146EF5"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M2.46692 9.36603L2.46692 7.6327L10.1841 7.6327L6.71741 4.16603L7.94692 2.93652L13.5098 8.49937L7.94692 14.0622L6.71741 12.8327L10.1841 9.36603L2.46692 9.36603ZM10.6669 9.16603L7.00026 12.8327L7.94692 13.7794L13.2269 8.49937L7.94692 3.21937L7.00026 4.16603L10.6669 7.8327L2.66692 7.8327L2.66692 9.16603L10.6669 9.16603Z"
-                              fill="#146EF5"/>
-                    </svg>
-
-                </a></p>
-        </div>
-        <div>
-            <img src="/showcase-3.webp" alt="Showcase 3 image">
-        </div>
-    </div>
-</section>
-
-<section class="share-section">
-    <div class="container">
-        <div class="share-section__column">
-            <div><img src="/share-section-image-1.webp" alt="Share section image 1"></div>
-            <h4>Share with a Custom link</h4>
-            <p>Add a personal touch to your flipbook links. Share your flipbooks with a custom link that reflects your
-                brand. Replace the default Publuu address with your own to help your audience recognize your business
-                easily.</p>
-        </div>
-        <div class="share-section__column">
-            <div><img src="/share-section-image-2.webp" alt="Share section image 2"></div>
-            <h4>Send as a Virtual Bookshelf</h4>
-            <p>Why stop at one flipbook? You can share multiple publications in an organized virtual bookshelf. It’s a
-                convenient way to present your books, product catalogs, or training materials all in one place.</p>
-        </div>
-    </div>
-</section>
-
-<section class="cta">
-    <div class="container">
-        <h2 class="cta__title">Start sharing flipbooks your way - today!</h2>
-        <a href="#" class="cta__link">Get started for free</a>
-    </div>
-</section>
-
-<footer class="footer">
-    <div class="container">
-        <div class="footer-menus">
-            <div class="footer-menus__block">
-                <strong>PUBLUU</strong>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Reviews</a></li>
-                    <li><a href="#"> Price plan</a></li>
-                    <li><a href="#"> Try for free</a></li>
-                    <li><a href="#"> Site Map</a></li>
-                </ul>
+                        </a></p>
+                </div>
+                <div>
+                    <img src="/showcase-1.webp" alt="Showcase 1 image">
+                </div>
             </div>
-            <div class="footer-menus__block">
-                <strong>Features</strong>
-                <ul>
-                    <li><a href="#">Virtual Bookshelf</a></li>
-                    <li><a href="#">Flipbook App</a></li>
-                    <li><a href="#">Statistics</a></li>
-                    <li><a href="#">PDF tracking</a></li>
-                </ul>
-            </div>
-            <div class="footer-menus__block">
-                <strong>Legal</strong>
-                <ul>
-                    <li><a href="#">Terms & conditions</a></li>
-                    <li><a href="#">Privacy statement</a></li>
-                    <li><a href="#">Cookie policy</a></li>
-                    <li><a href="#">Refund policy</a></li>
-                    <li><a href="#">Content Protection</a></li>
-                </ul>
-            </div>
-            <div class="footer-menus__block">
-                <strong>Help</strong>
-                <ul>
-                    <li><a href="#">What is a Flipbook?</a></li>
-                    <li><a href="#">Help Guide</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-menus__block">
-                <strong>Solutions</strong>
-                <ul>
-                    <li><a href="#">Flipbook Maker</a></li>
-                    <li><a href="#">Online Catalog</a></li>
-                    <li><a href="#">Magazine Maker</a></li>
-                    <li><a href="#">Brochure Maker</a></li>
-                    <li><a href="#">PDF Page Flip Effect</a></li>
-                </ul>
-            </div>
-            <div class="footer-menus__block">
-                <strong>&nbsp;</strong>
-                <ul>
-                    <li><a href="#">Business Proposal</a></li>
-                    <li><a href="#">Ebook Maker</a></li>
-                    <li><a href="#">Multimedia Presentation</a></li>
-                    <li><a href="#">Company Newsletter Maker</a></li>
-                </ul>
-            </div>
-        </div>
 
-        <div class="footer__bottom">
-            <div class="footer_lang">English</div>
-            <div class="footer__copyright">
-                Convert your PDF into HTML5 Online flipbook with PAGE FLIP EFFECT.<br>All-in-one Flipbook Maker
-            </div>
-        
-            <div class="footer__social">
-                <span>Follow Us:</span>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Linkedin</a></li>
-                </ul>
-            </div>
-        </div>
-        
+            <div class="container">
+                <div class="showcase__content">
+                    <h2>Send Flipbooks<br>via Email</h2>
+                    <h3>No attachments needed!</h3>
+                    <p>Say goodbye to big email attachments! Just add your flipbooks’s direct link to an email or
+                        include its
+                        cover into the signature. Your customers can open it instantly with one simple click, no matter
+                        where
+                        they are.</p>
+                    <p><strong>Learn more about</strong>
+                        <a href="#" class="custom-link">
+                            Sharing with Direct Links
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.66692 9.16603L2.66692 7.8327L10.6669 7.8327L7.00026 4.16603L7.94692 3.21937L13.2269 8.49937L7.94692 13.7794L7.00026 12.8327L10.6669 9.16603L2.66692 9.16603Z"
+                                      fill="#146EF5"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M2.46692 9.36603L2.46692 7.6327L10.1841 7.6327L6.71741 4.16603L7.94692 2.93652L13.5098 8.49937L7.94692 14.0622L6.71741 12.8327L10.1841 9.36603L2.46692 9.36603ZM10.6669 9.16603L7.00026 12.8327L7.94692 13.7794L13.2269 8.49937L7.94692 3.21937L7.00026 4.16603L10.6669 7.8327L2.66692 7.8327L2.66692 9.16603L10.6669 9.16603Z"
+                                      fill="#146EF5"/>
+                            </svg>
 
+                        </a></p>
+                </div>
+                <div>
+                    <img src="/showcase-2.webp" alt="Showcase 2 image">
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="showcase__content">
+                    <h2>Guide Readers to a Specific Page</h2>
+                    <p>Take your audience exactly where they need to go! With Publuu, you can create links to specific
+                        pages in
+                        your flipbook, guiding readers to key content and saving them time searching through the
+                        document.</p>
+                    <p><strong>Learn more about</strong>
+                        <a href="#" class="custom-link">
+                            Sharing with Direct Links
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.66692 9.16603L2.66692 7.8327L10.6669 7.8327L7.00026 4.16603L7.94692 3.21937L13.2269 8.49937L7.94692 13.7794L7.00026 12.8327L10.6669 9.16603L2.66692 9.16603Z"
+                                      fill="#146EF5"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M2.46692 9.36603L2.46692 7.6327L10.1841 7.6327L6.71741 4.16603L7.94692 2.93652L13.5098 8.49937L7.94692 14.0622L6.71741 12.8327L10.1841 9.36603L2.46692 9.36603ZM10.6669 9.16603L7.00026 12.8327L7.94692 13.7794L13.2269 8.49937L7.94692 3.21937L7.00026 4.16603L10.6669 7.8327L2.66692 7.8327L2.66692 9.16603L10.6669 9.16603Z"
+                                      fill="#146EF5"/>
+                            </svg>
+
+                        </a></p>
+                </div>
+                <div>
+                    <img src="/showcase-3.webp" alt="Showcase 3 image">
+                </div>
+            </div>
+        </section>
+
+        <section class="share-section">
+            <div class="container">
+                <div class="share-section__column">
+                    <div><img src="/share-section-image-1.webp" alt="Share section image 1"></div>
+                    <h4>Share with a Custom link</h4>
+                    <p>Add a personal touch to your flipbook links. Share your flipbooks with a custom link that
+                        reflects your
+                        brand. Replace the default Publuu address with your own to help your audience recognize your
+                        business
+                        easily.</p>
+                </div>
+                <div class="share-section__column">
+                    <div><img src="/share-section-image-2.webp" alt="Share section image 2"></div>
+                    <h4>Send as a Virtual Bookshelf</h4>
+                    <p>Why stop at one flipbook? You can share multiple publications in an organized virtual bookshelf.
+                        It’s a
+                        convenient way to present your books, product catalogs, or training materials all in one
+                        place.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2 class="cta__title">Start sharing flipbooks your way - today!</h2>
+                <a href="#" class="cta__link">Get started for free</a>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-menus">
+                    <div class="footer-menus__block">
+                        <strong>PUBLUU</strong>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Reviews</a></li>
+                            <li><a href="#"> Price plan</a></li>
+                            <li><a href="#"> Try for free</a></li>
+                            <li><a href="#"> Site Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menus__block">
+                        <strong>Features</strong>
+                        <ul>
+                            <li><a href="#">Virtual Bookshelf</a></li>
+                            <li><a href="#">Flipbook App</a></li>
+                            <li><a href="#">Statistics</a></li>
+                            <li><a href="#">PDF tracking</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menus__block">
+                        <strong>Legal</strong>
+                        <ul>
+                            <li><a href="#">Terms & conditions</a></li>
+                            <li><a href="#">Privacy statement</a></li>
+                            <li><a href="#">Cookie policy</a></li>
+                            <li><a href="#">Refund policy</a></li>
+                            <li><a href="#">Content Protection</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menus__block">
+                        <strong>Help</strong>
+                        <ul>
+                            <li><a href="#">What is a Flipbook?</a></li>
+                            <li><a href="#">Help Guide</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menus__block">
+                        <strong>Solutions</strong>
+                        <ul>
+                            <li><a href="#">Flipbook Maker</a></li>
+                            <li><a href="#">Online Catalog</a></li>
+                            <li><a href="#">Magazine Maker</a></li>
+                            <li><a href="#">Brochure Maker</a></li>
+                            <li><a href="#">PDF Page Flip Effect</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menus__block">
+                        <strong>&nbsp;</strong>
+                        <ul>
+                            <li><a href="#">Business Proposal</a></li>
+                            <li><a href="#">Ebook Maker</a></li>
+                            <li><a href="#">Multimedia Presentation</a></li>
+                            <li><a href="#">Company Newsletter Maker</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__bottom">
+                    <div class="footer_lang">English</div>
+                    <div class="footer__copyright">
+                        Convert your PDF into HTML5 Online flipbook with PAGE FLIP EFFECT.<br>All-in-one Flipbook Maker
+                    </div>
+
+                    <div class="footer__social">
+                        <span>Follow Us:</span>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Linkedin</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </footer>
     </div>
-</footer>
-
+</div>
 <script type="module" src="/index.js"></script>
 </body>
 </html>

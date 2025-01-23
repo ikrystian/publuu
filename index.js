@@ -1,4 +1,14 @@
 import "./src/styles/main.scss";
+import 'offcanvas';
+
+window.addEventListener("scroll", () => {
+    const header = document.querySelector("#header");
+    if (window.scrollY > 200) {
+        header.classList.add("header--active");
+    } else {
+        header.classList.remove("header--active");
+    }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     const sentences = [
@@ -34,13 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     type();
+
+    document.querySelector('#off-canvas-menu').appendChild(document.querySelector(".main-nav ul").cloneNode(true));
 });
 
-window.addEventListener("scroll", () => {
-    const header = document.querySelector("#header");
-    if (window.scrollY > 200) {
-        header.classList.add("header--active");
-    } else {
-        header.classList.remove("header--active");
-    }
-})

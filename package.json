@@ -13,5 +13,8 @@
   "devDependencies": {
     "sass-embedded": "^1.83.4",
     "vite": "^6.0.11"
+  },
+  "dependencies": {
+    "offcanvas": "^3.3.0"
   }
 }
