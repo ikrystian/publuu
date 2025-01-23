@@ -29,6 +29,14 @@ h2 {
   margin-bottom: 40px;
 }
 
+h4 {
+  font-family: "Urbanist", serif;
+  font-size: 32px;
+  linne-height: 38px;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
 p {
   font-size: 18px;
   line-height: 31px;
@@ -271,6 +279,28 @@ section {
         min-width: 440px;
         width: 440px;
       }
+    }
+  }
+}
+
+.share-section {
+  &__column {
+    width: 520px;
+    max-width: 100%;
+  }
+
+  img {
+    margin-bottom: 40px;
+  }
+
+  h4 {
+
+  }
+
+  .container {
+    @media (width > $tablet) {
+      display: flex;
+      justify-content: space-between;
     }
   }
 }
