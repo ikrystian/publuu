@@ -340,6 +340,7 @@ section {
 }
 
 .section-qr-code {
+  padding-bottom: 0;
   &__content {
     max-width: 630px;
 
@@ -360,6 +361,7 @@ section {
 }
 
 .embed-section {
+  padding-top: 40px;
   padding-bottom: 80px;
 
   h2 {
@@ -421,6 +423,13 @@ section {
 }
 
 .showcase {
+  display: flex;
+  flex-direction: column;
+
+  @media (width > $tablet) {
+    gap: 120px;
+  }
+
   .container {
     @media (width > $tablet) {
       display: flex;
@@ -446,6 +455,10 @@ section {
       &:nth-child(3) {
         max-width: 360px;
       }
+    }
+
+    h2 + p {
+      margin-bottom: 2rem;
     }
 
     + div {
@@ -481,7 +494,7 @@ section {
 }
 
 .cta {
-  background: url("/cta-bg.webp") center no-repeat;
+  background: url("/public/cta-bg.webp") center no-repeat;
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -525,6 +538,16 @@ section {
       list-style: none;
       display: flex;
       align-items: center;
+      gap: 10px;
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
     }
   }
 }
