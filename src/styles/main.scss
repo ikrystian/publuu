@@ -15,6 +15,8 @@
   &__content {
     padding: 1rem;
     background-color: #fff;
+    max-height: 80vh;
+    overflow-y: auto;
 
     p {
       margin-top: 1rem;
@@ -604,7 +606,9 @@ section {
 }
 
 .pulse {
-  animation: pulse 1s infinite ease-in-out alternate;
+  @media (width > $tablet) {
+    animation: pulse 1s infinite ease-in-out alternate;
+  }
 }
 
 @keyframes pulse {
@@ -821,11 +825,18 @@ section {
 
   &__bottom {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     color: rgba(255, 255, 255, 0.5);
-    text-align: center;
     opacity: 40%;
     padding-bottom: 20px;
+    gap: 1rem;
+
+    @media (width > $tablet) {
+      flex-direction: row;
+      text-align: center;
+      gap: 0.5rem
+    }
   }
 
   &__social {
