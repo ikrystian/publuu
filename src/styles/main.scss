@@ -49,6 +49,25 @@ section {
   max-width: 100%;
 }
 
+.custom-link {
+  position: relative;
+  display: inline-block;
+  color: #146EF5;
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    svg {
+      transform: translateX(6px);
+    }
+  }
+
+  svg {
+    position: relative;
+    top: 2px;
+    transition: transform .2s;
+  }
+}
 
 .hero-section {
   padding-bottom: 0;
@@ -149,12 +168,17 @@ section {
 .section-qr-code {
   &__content {
     max-width: 630px;
+
+    p:not(:last-child) {
+      margin-bottom: 40px;
+    }
   }
 
   .container {
     @media (width > $tablet) {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 2rem;
       padding-bottom: 60px;
     }
