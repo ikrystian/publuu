@@ -2,6 +2,7 @@
 
 $tablet: 768px;
 $primary-space: 120px;
+$primary-color: #146EF5;
 
 * {
   margin: 0;
@@ -33,7 +34,7 @@ h2 {
 h4 {
   font-family: "Urbanist", serif;
   font-size: 32px;
-  linne-height: 38px;
+  line-height: 38px;
   margin-bottom: 20px;
   font-weight: 900;
 }
@@ -75,6 +76,46 @@ section {
     position: relative;
     top: 2px;
     transition: transform .2s;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-block: 20px;
+  background-color: #fff;
+  z-index: 2;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (width > 768px) {
+  .main-nav {
+    ul {
+      display: flex;
+      gap: 3.2rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 600;
+      line-height: 18px;
+      color: #080808;
+      transition: color 0.2s ease-in-out;
+
+      &:hover, &:focus {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -358,11 +399,11 @@ section {
 .footer-menus {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 94px;
 
   &__block {
-  margin-block: 60px;
+    margin-block: 60px;
 
     strong {
       color: #fff;
