@@ -88,6 +88,12 @@ section {
   padding-block: 20px;
   background-color: #fff;
   z-index: 2;
+  transition: box-shadow .2s ease-in-out, padding .2s ease-in-out;
+
+  &--active {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding-block: 10px;
+  }
 
   .container {
     display: flex;

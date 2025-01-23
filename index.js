@@ -34,4 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     type();
+});
+
+window.addEventListener("scroll", () => {
+    const header = document.querySelector("#header");
+    if (window.scrollY > 200) {
+        header.classList.add("header--active");
+    } else {
+        header.classList.remove("header--active");
+    }
 })
