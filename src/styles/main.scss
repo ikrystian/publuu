@@ -762,7 +762,11 @@ section {
 
     + div {
       img {
+        margin-top: 2rem;
         animation: float 3s ease-in-out infinite;
+        @media (width > $tablet) {
+          margin-top: 0
+        }
       }
 
       @media (width > $tablet) {
